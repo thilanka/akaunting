@@ -28,6 +28,8 @@
 
                     {{ Form::selectRemoteAddNewGroup('contact_id', trans_choice('general.customers', 1), 'user', $customers, old('contact.id', old('contact_id', null)), ['path' => route('modals.customers.create'), 'remote_action' => route('customers.index')]) }}
 
+                    {{ Form::selectRemoteAddNewGroup('contact_id', trans_choice('general.customers', 1), 'user', $customers, old('contact.id', old('contact_id', null)), ['path' => route('modals.customers.create'), 'remote_action' => route('customers.index')]) }}
+
                     {{ Form::textareaGroup('description', trans('general.description')) }}
 
                     {{ Form::selectRemoteAddNewGroup('category_id', trans_choice('general.categories', 1), 'folder', $categories, setting('default.income_category'), ['required' => 'required', 'path' => route('modals.categories.create') . '?type=income', 'remote_action' => route('categories.index'). '?search=type:income']) }}
